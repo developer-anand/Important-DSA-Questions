@@ -1,3 +1,5 @@
+//We have to  print an array as spiral
+
 
 #include<bits/stdc++.h>
 using namespace std;
