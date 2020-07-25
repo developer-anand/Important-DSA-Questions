@@ -33,3 +33,32 @@ int main() {
 		cout<<miss_ele[i]<<" ";
 	}
 }
+
+//Optimize 
+class Solution {
+public:
+    vector<int> findDisappearedNumbers(vector<int>& nums) {
+        vector <int> output;
+        
+        for (int i= 0; i<nums.size(); i++){
+            
+            int idx = abs(nums[i]) -1;
+            
+            if(nums[idx]>0){
+                nums[idx] = -abs(nums[idx]);
+            }
+            
+        }
+        
+        for (int j=0; j<nums.size(); j++){
+            if (nums[j]>0){
+                output.push_back(j+1);
+            }
+        }
+       
+
+        return output;
+        
+        
+    }
+};
